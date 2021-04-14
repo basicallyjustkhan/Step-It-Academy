@@ -1,40 +1,27 @@
-// FAILED!
-
 using System;
 
 namespace C_Sharp_Main
 {
 	class Program
 	{
-		public static int Task3(string str)
-		{
-			char currentletter;
-			int i;
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine();
+            char[] arr = str.ToCharArray();
 
-			for (i = 0; i < 49; i++)
-			{
-				currentletter = str[i];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] >= 65 && arr[i] <= 90)
+                {
+                    arr[i] = (char)(arr[i] + 32);
+                }
+                else
+                {
+                    arr[i] = (char)(arr[i] - 32);
+                }
+            }
 
-				if ((currentletter > 96) && (currentletter < 123))
-				{
-					char newletter;
-					newletter = currentletter - 32;
-					str[i] = newletter;
-				}
-				else
-				{
-					str[i] = currentletter;
-				}
-			}
-
-			return
-		}
-		public static void Main()
-		{
-			string str;
-			Console.Write("Enter the String: ");
-			str = Console.ReadLine();
-			Console.WriteLine(Task3(str));
-		}
-	}
+            Console.WriteLine(arr);
+        }
+    }
 }
