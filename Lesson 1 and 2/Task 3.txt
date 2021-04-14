@@ -1,0 +1,38 @@
+using System;
+
+namespace C_Sharp_Main
+{
+	class Program
+	{
+		public static int Task3(string str)
+		{
+			char currentletter;
+			int i;
+
+			for (i = 0; i < 49; i++)
+			{
+				currentletter = str[i];
+
+				if ((currentletter > 96) && (currentletter < 123))
+				{
+					char newletter;
+					newletter = currentletter - 32;
+					str[i] = newletter;
+				}
+				else
+				{
+					str[i] = currentletter;
+				}
+			}
+
+			return
+		}
+		public static void Main()
+		{
+			string str;
+			Console.Write("Enter the String: ");
+			str = Console.ReadLine();
+			Console.WriteLine(Task3(str));
+		}
+	}
+}
