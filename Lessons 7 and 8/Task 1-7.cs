@@ -1,3 +1,4 @@
+// Task 1 to 7
 enum ArticleType
 {
     TEA,
